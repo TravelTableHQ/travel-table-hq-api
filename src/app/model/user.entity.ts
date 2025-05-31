@@ -7,8 +7,8 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity({ name: 'test' })
-export default class TestEntity extends BaseEntity {
+@Entity({ name: 'tb_user' })
+export default class UserEntity extends BaseEntity {
   @PrimaryGeneratedColumn({ type: 'bigint', name: 'id' })
   id!: string;
 

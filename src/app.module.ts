@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { WinstonModule } from 'nest-winston';
+import { WwwModule } from './app/www/www.module';
 import * as winston from 'winston';
 import DailyRotateFile from 'winston-daily-rotate-file';
 
@@ -96,6 +97,7 @@ import DailyRotateFile from 'winston-daily-rotate-file';
         };
       },
     }),
+    WwwModule,
   ],
   controllers: [AppController],
   providers: [AppService],
